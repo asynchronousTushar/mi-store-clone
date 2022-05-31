@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import PreNavbar from './components/PreNavbar';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router } from 'react-router-dom';
+import data from './data/data.json';
+import Slider from './components/Slider';
+import Offers from './components/Offers';
+import Heading from './components/Heading';
+import StarProduct from './components/StarProduct';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router >
+            <PreNavbar />
+            <Navbar />
+            <Slider start={data.banner.start} />
+            <Offers offer={data.offer} />
+            <Heading text="STAR PRODUCTS" />
+            <StarProduct products={data.starProduct}/>
+            <Heading text="HOT ACCESSORIES" />
+        </Router>
+    );
 }
 
 export default App;
