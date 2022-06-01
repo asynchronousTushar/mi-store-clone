@@ -9,6 +9,7 @@ import Heading from './components/Heading';
 import StarProduct from './components/StarProduct';
 import HotAccessoriesMenu from './components/HotAccessoriesMenu';
 import HotAccessories from './components/HotAccessories';
+import ProductReviews from './components/ProductReviews';
 
 function App() {
     return (
@@ -29,6 +30,9 @@ function App() {
                 <Route path="/lifestyle" element={<HotAccessories lifestyle={data.hotAccessories.lifeStyle} lifestyleCover={data.hotAccessoriesCover.lifeStyle} />} />
                 <Route path="/mobileaccessories" element={<HotAccessories mobileAccessories={data.hotAccessories.mobileAccessories} mobileAccessoriesCover={data.hotAccessoriesCover.mobileAccessories} />} />
             </Routes>
+
+            <Heading text="PRODUCT REVIEWS" />
+            <ProductReviews productReviews={data.productReviews}/>
         </Router>
     );
 }

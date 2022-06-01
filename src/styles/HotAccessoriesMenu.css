@@ -1,6 +1,8 @@
 .HotAccessoriesMenu {
     display: flex;
     justify-content: center;
+    margin-top: -2vmax;
+    margin-bottom: 2.5vmax;
 }
 
 .HotAccessoriesLink {
