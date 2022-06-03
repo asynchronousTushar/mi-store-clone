@@ -1,4 +1,3 @@
-import '../styles/Banner.css';
 import { Carousel } from 'react-bootstrap';
 
 const Banner = ({ banner }) => {
