@@ -4,7 +4,7 @@ const Banner = ({ banner }) => {
     return (
         <Carousel fade>
             {banner.map((item, index) => (
-                <Carousel.Item key={index} interval={1000} keyboard={true} id="banner" >
+                <Carousel.Item key={index} interval={1000} id="banner" >
                     <img src={item.image} alt={'banner ' + index} className="d-block w-100" id="bannerImage" />
                     <Carousel.Caption>
                         <h3>{item.name}</h3>

@@ -50,7 +50,7 @@ const Footer = ({footer}) => {
                 <div>
                     <p> SUPPORT</p>
                     {footer.support.map((item, index) => (
-                        <a key={item.url} href={item.url}>{item.name}</a>
+                        <a key={index} href={item.url}>{item.name}</a>
 
                     ))}
                 </div>
@@ -58,7 +58,7 @@ const Footer = ({footer}) => {
                 <div>
                     <p> SHOP AND LEARN</p>
                     {footer.shopAndLearn.map((item, index) => (
-                        <a key={item.url} href={item.url}>{item.name} </a>
+                        <a key={index} href={item.url}>{item.name} </a>
 
                     ))}
 
@@ -66,7 +66,7 @@ const Footer = ({footer}) => {
                 <div>
                     <p> RETAIL STORE</p>
                     {footer.retailStore.map((item, index) => (
-                        <a key={item.url} href={item.url}>{item.name}</a>
+                        <a key={index} href={item.url}>{item.name}</a>
 
                     ))}
                 </div>
@@ -74,7 +74,7 @@ const Footer = ({footer}) => {
                 <div>
                     <p>  ABOUT</p>
                     {footer.aboutUS.map((item, index) => (
-                        <a key={item.url} href={item.url}>{item.name}</a>
+                        <a key={index} href={item.url}>{item.name}</a>
 
                     ))}
                 </div>
@@ -82,7 +82,7 @@ const Footer = ({footer}) => {
                 <div>
                     <p> CONTACT US</p>
                     {footer.contactUs.map((item, index) => (
-                        <a key={item.url} href={item.url}>{item.name}</a>
+                        <a key={index} href={item.url}>{item.name}</a>
 
                     ))}
                 </div>
