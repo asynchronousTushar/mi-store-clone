@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import NavCard from "./NavCard";
 import '../styles/NavOptions.css';
 import { PathContex } from "../App";
+import { Fade } from 'react-awesome-reveal';
 
 const NavOptions = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, home, audio, accessories, pathController }) => {
     const [toggler, setToggler] = useState({
@@ -59,8 +60,8 @@ const NavOptions = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, ho
                     accessoriesToggle: true
                 })
                 break;
-         
-        
+
+
             default:
                 setToggler({
                     homeToggle: true
@@ -69,56 +70,58 @@ const NavOptions = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, ho
     }, [path])
 
     return (
-        <div className="navOptions">
-            {toggler.miPhoneToggle ? miPhones.map((item) => (
+        <Fade>
+            <div className="navOptions">
+                {toggler.miPhoneToggle ? miPhones.map((item) => (
 
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
-
-
-            {toggler.redmiPhoneToggle ? redmiPhones.map((item) => (
-
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
 
 
-            {toggler.tvToggle ? tv.map((item) => (
+                {toggler.redmiPhoneToggle ? redmiPhones.map((item) => (
 
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
-
-            {toggler.laptopToggle ? laptop.map((item) => (
-
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
 
 
+                {toggler.tvToggle ? tv.map((item) => (
 
-            {toggler.fitnessToggle ? fitnessAndLifeStyle.map((item) => (
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
 
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
+                {toggler.laptopToggle ? laptop.map((item) => (
 
-
-            {toggler.homeToggle ? home.map((item) => (
-
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
 
 
 
-            {toggler.audioToggle ? audio.map((item) => (
+                {toggler.fitnessToggle ? fitnessAndLifeStyle.map((item) => (
 
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
 
 
-            {toggler.accessoriesToggle ? accessories.map((item) => (
+                {toggler.homeToggle ? home.map((item) => (
 
-                < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
-            )) : null}
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
 
-        </div>
+
+
+                {toggler.audioToggle ? audio.map((item) => (
+
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
+
+
+                {toggler.accessoriesToggle ? accessories.map((item) => (
+
+                    < NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
+                )) : null}
+
+            </div>
+        </Fade>
     );
 }
 

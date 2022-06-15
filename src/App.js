@@ -15,6 +15,7 @@ import Banner from './components/Banner';
 import Footer from './components/Footer';
 import NavOptions from './components/NavOptions';
 import { createContext, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 
 export const PathContex = createContext()
 
@@ -29,10 +30,10 @@ function App() {
     return (
         <Router >
             <PathContex.Provider value={path} >
+                <Fade>
                 <PreNavbar />
                 <Navbar pathController={pathController} />
                 <NavOptions miPhones={data.miPhones} redmiPhones={data.redmiPhones} tv={data.tv} laptop={data.laptop} fitnessAndLifeStyle={data.fitnessAndLifeStyle} home={data.home} audio={data.audio} accessories={data.accessories} />
-
                 <Slider start={data.banner.start} />
                 <Offers offer={data.offer} />
                 <Heading text="STAR PRODUCTS" />
@@ -56,6 +57,7 @@ function App() {
                 <Heading text="IN THE PRESS" />
                 <Banner banner={data.banner.end} />
                 <Footer footer={data.footer} />
+                </Fade>
             </PathContex.Provider>
         </Router >
     );
